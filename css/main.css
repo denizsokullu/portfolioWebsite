@@ -57,6 +57,7 @@ p{
   99%{opacity:0;}
 }
 
+
 .landing .actionShapes{
 	position:absolute;
 	width:100vw;
@@ -142,25 +143,30 @@ h4{
 }
 .landing-work{	
 	height:50vh;
+	min-height:350px;
 	background:#3299BB;
 	background-color:#3299BB;
 	background: linear-gradient(to top,rgba(50,153,187,0.4), white); /* Standard syntax */
 
 }
-h1{
-    padding-top: 100px;
+.landing-work h1{
+    padding-top: 80px;
 	color: #7addb9;
 	font-weight: 500;
 	font-size: 36pt;
 }
 .work-section{
+	min-height:400px;
 	height:100vh;
+	padding-top:10vh;
+	padding-bottom:10vh;
 }
 .work-intro{
 	height:50vh;
+	min-height:350px;
 	background-color: white;
 	text-align:center;
-	padding-top:20vh;
+	padding-top:80px;
 }
 #s1{
 	background-color: #87D89E;
@@ -175,6 +181,18 @@ h1{
 	background-color: #8899FF;
 }
 
+.work-hero-image{
+	min-height: 350px;
+	height:80vh;
+	background-color: white;
+
+}
+
+.work-hero-content{
+	min-height: 350px;
+	height:80vh;
+	background-color: white;
+}
 
 
 
