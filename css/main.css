@@ -1,3 +1,7 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 body{
 	padding-top:0!important;
 	font-family: 'Ek Mukta', sans-serif;
@@ -10,6 +14,7 @@ p{
 	font-size:13pt;
 }
 .links{
+	width:100vw;
 	padding-top: 3%;
 	text-align: center;
 }
@@ -141,8 +146,31 @@ h4{
 .landing-image-work{
 	text-align: center;
 }
-.landing-work{	
-	height:50vh;
+@keyframes wiggle{
+	20%{transform: rotate(15deg);}
+	60%{transform: rotate(-30deg);}
+	80%{transform: rotate(15deg);}
+	85%{transform: rotate(5deg);}
+	95%{transform: rotate(-10deg);}
+	100%{transform: rotate(5deg);}
+}
+.vectorProfileSmall:hover{
+	animation:wiggle 0.4s;
+}
+
+@keyframes work-landing{
+	0%{height:120vh;}
+	100%{height:45vh;}
+}
+@keyframes fadeIn{
+	from{opacity:0.1;}
+	to{opacity:1;}
+}
+.landing-work{
+	animation-name: work-landing;
+	animation-duration: 0.9s;
+	animation-timing-function: cubic-bezier(0,0,0.58,1);
+	height:45vh;
 	min-height:350px;
 	background:#3299BB;
 	background-color:#3299BB;
@@ -150,38 +178,27 @@ h4{
 
 }
 .landing-work h1{
+	animation: fadeIn 1.2s;
+	animation-timing-function: ease-in-out;
     padding-top: 80px;
 	color: #7addb9;
 	font-weight: 500;
 	font-size: 36pt;
 }
 .work-section{
+	background-color: white;
 	min-height:400px;
 	height:100vh;
 	padding-top:10vh;
 	padding-bottom:10vh;
+	width:100vw;
 }
-.work-intro{
-	height:50vh;
-	min-height:350px;
-	background-color: white;
-	text-align:center;
-	padding-top:80px;
-}
-#s1{
-	background-color: #87D89E;
-}
-#s2{
-	background-color: #F2F27E;
-}
-#s3{
-	background-color: #EDB285;
-}
-#s4{
-	background-color: #8899FF;
+.work-hero-content h1{
+	color: #7addb9;
 }
 
 .work-hero-image{
+	padding-top:10vh;
 	min-height: 350px;
 	height:80vh;
 	background-color: white;
@@ -191,10 +208,41 @@ h4{
 .work-hero-content{
 	min-height: 350px;
 	height:80vh;
+	padding-right:60px;
 	background-color: white;
 }
 
+.footer{
+	width:100vw;
+}
+.unslider-arrow,.unslider-nav{
+	margin-top:20px;
+}
 
+.unslider-arrow{
+	color:#21564b;
+	-webkit-user-select: none;
+	user-select: none; 
+	-moz-user-select: none;
+}
+.unslider-arrow:hover{
+	text-decoration: none;
+	color:#7addb9;
+}
+
+
+.unslider{
+	overflow-y: hidden!important;
+	overflow-x: hidden!important;
+	max-width: 100%;
+}
+.slider{
+	overflow-x: hidden;
+}
+.slider ul li img{
+	width:100%;
+	height:auto;
+}
 
 
 
