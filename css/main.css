@@ -307,6 +307,14 @@ h4{
 		margin-left:0px!important;
 	}
 }
+@media only screen and (max-width: 430px){
+	.work-hero-content{
+		padding-right:30px;
+		padding-left:30px;
+		min-height:0px;
+	}
+
+}
 
 
 
