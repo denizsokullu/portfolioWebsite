@@ -27,7 +27,7 @@ p{
 }
 .links a:hover{
 	text-decoration: none;
-	color:#45b29a;
+	color:white;
 }
 .links a:visited{
 	text-decoration: none;
@@ -41,10 +41,8 @@ p{
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-	height:100vh;
-	background:#3299BB;
-	background-color:#3299BB;
-	background: linear-gradient(to top,rgba(50,153,187,0.4), white); /* Standard syntax */
+	background-color:#7addb9;
+	/*background: linear-gradient(to top,rgba(50,153,187,0.2), rgb(122,221,185)); /* Standard syntax */*/
 }
 
 @keyframes actionShapesAnim {
@@ -118,10 +116,10 @@ p{
 
 }
 .landing-image .landing-main{
-	width:30%;
-	position: absolute;
-	bottom:-15px;
-	left:35%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	max-width:500px;
 }
 
 .vectorProfile{
@@ -166,31 +164,45 @@ h4{
 	from{opacity:0.1;}
 	to{opacity:1;}
 }
+.landing h1,.landing-image{
+	animation: fadeIn 1.2s;
+}
+.landing-footer a:hover{
+	color:#7addb9;
+}
+.landing-signature img{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	max-width:360px;
+}
+.landing-signature{
+	margin-top:50px;
+	margin-bottom:50px;
+}
 .landing-work{
 	animation-name: work-landing;
 	animation-duration: 0.9s;
 	animation-timing-function: cubic-bezier(0,0,0.58,1);
 	height:45vh;
 	min-height:350px;
-	background:#3299BB;
-	background-color:#3299BB;
-	background: linear-gradient(to top,rgba(50,153,187,0.4), white); /* Standard syntax */
+	background-color:#7addb9;
+/*	background: linear-gradient(to top,rgb(179,255,171), rgb(122,221,185)); /* Standard syntax */*/
 
 }
 .landing-work h1{
 	animation: fadeIn 1.2s;
 	animation-timing-function: ease-in-out;
     padding-top: 80px;
-	color: #7addb9;
+	color: white;
 	font-weight: 500;
 	font-size: 36pt;
 }
 .work-section{
 	background-color: white;
 	min-height:400px;
-	height:100vh;
-	padding-top:10vh;
-	padding-bottom:10vh;
+	padding-top:80px;
+	padding-bottom:80px;
 	width:100vw;
 }
 .work-hero-content h1{
@@ -198,16 +210,16 @@ h4{
 }
 
 .work-hero-image{
-	padding-top:10vh;
-	min-height: 350px;
-	height:80vh;
+	padding-top:80px;
+	margin-bottom:40px;
 	background-color: white;
-
+}
+.tutsianDefenders{
+	padding-top:30px;
 }
 
 .work-hero-content{
 	min-height: 350px;
-	height:80vh;
 	padding-right:60px;
 	background-color: white;
 }
@@ -245,6 +257,56 @@ h4{
 }
 
 
+
+@media only screen and (max-width: 1200px) and (min-width:992px){
+	.work-hero-content{
+	padding-left:60px;
+	min-height:0px;
+
+	}
+	.container{
+		padding-right:100px;
+		padding-left:100px;
+	}
+	.work-section{
+		padding-top:50px;
+		padding-bottom:50px;
+	}
+
+	.row{
+		margin-left:0px!important;
+	}
+}
+@media only screen and (max-width: 768px){
+	.work-hero-content{
+	padding-left:60px;
+	min-height:0px;
+	}
+	.landing-image .landing-main{
+		max-width:275px!important;
+	}
+	.landing-signature{
+		display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+	.landing-signature img{	
+		max-width:250px;
+	}
+	.work-section{
+		border-bottom:1px dashed #7addb9;
+		padding-top:50px;
+		padding-bottom:50px;
+	}
+	.work-hero-image{
+		min-height:0px;
+		padding-top:0px;
+		margin-bottom:0px;
+	}
+	.row{
+		margin-left:0px!important;
+	}
+}
 
 
 
