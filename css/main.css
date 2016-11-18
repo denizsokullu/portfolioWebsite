@@ -157,7 +157,7 @@ h4{
 }
 
 @keyframes work-landing{
-	0%{height:1200px;}
+	0%{height:700px;}
 	100%{height:400px;}
 }
 @keyframes fadeIn{
