@@ -35,123 +35,85 @@ Below is a boilerplate for a JSON Muse extension file.
   "name": "unique-name-for-your-whole-extension",
   "description": "description-goes-here",
   "services": [
-    "Muse" //This specifies the usage of the Muse service.
+    "Muse"
   ],
   "title": "title-that-isn't-needed-that-much",
   "app_id": "will-be-explained-in-a-later-section-with-url"
 }
 ```
-And here is an example usage scenario where there is only one extension added.
-
+And here is an example usage where there is only one extension added.
 ```json
 {
   "extensions": [
     {
-      "application": "application-name",
+      "application": "DPCHelloWorld",
       "payload": {
         "match": {
-          "user-email": "your-email",
-          "user-name": "your-name-as-it-is-on-Connections",
-          "url": "will-be-explained-in-a-later-section"
+          "user-name": "Darren Cacy",
+          "user-email": "darren.cacy@ibm.com",
+          "url": "homepage"
         },
         "include-files": [
-          "the-list-of-.js-files-you-want-to-include",
-          "script1.js",
-          "script2.js"
+          "dcacy/HelloWorld.js"
         ]
       },
-      "name": "unique-name-for-this-extension-app",
-      "type": "will-be-explained-in-a-later-section-with-url"
+      "name": "DPC Hello World",
+      "id": "ab7a762f-0ddd-43c6-a9b9-cfeaad0624ce",
+      "type": "com.ibm.homepage"
     }
   ],
-  "name": "unique-name-for-your-whole-extension",
-  "description": "description-goes-here",
+  "name": "DPCHelloWorld",
+  "description": "Darren test",
   "services": [
-    "Muse" //This specifies the usage of the Muse service.
+    "Muse"
   ],
-  "title": "title-that-isn't-needed-that-much",
-  "app_id": "will-be-explained-in-a-later-section-with-url"
+  "id": "9449783f-5ce1-43a1-bbdc-a75aaf86e35f",
+  "title": "DPC Hello World Customizations",
+  "app_id": "ibm.connections.homepage.dpc.helloworld"
+}
+
+```
+* ##### extensions.application, extensions.name, name, title
+As long as these are descriptive to some level about the extension and different than the other extensions, it is fine.
+
+* ##### user-name and user-email
+Only one of the user-name and user-email fields are enough to "match" to a request.
+
+* ##### id, extensions.id
+You may be wondering about the id fields that got added. Those are uniquely created to tag this extension. Once you upload the JSON file on the applcations extension page, the id's get assigned automatically.
+
+* ##### url
+To make the injections more specific, there is an url field which you can specify which section of connections it applies to.
+	* "com.ibm.homepage"
+	* "com.ibm.communities"
+	* "com.ibm.files"
+	* "com.ibm.meetings"
+	* ADD MORE HERE
+
+
+* ##### type, app_\id
+For type, the url and this field have to be matching. So for example:
+```json
+{
+	"url": "homepage",
+    "type": "com.ibm.homepage"
+}
+```
+For app\_id, usually add your user-name and your extension name/title on the end of ibm.connections."your-url". For example:
+```json
+{
+	"app_id": "ibm.connections.homepage.dpc.helloworld"
 }
 ```
 
 
-### Prerequisites
+* ##### include-files
+This array includes the .js files that you want the Muse server execute before the client receives it. For directory, the base directory is the github repo base directory. Since this is a shared repo under i1, create a folder with your name, and place the scripts within that folder. The current repo link is https://github.ibm.com/i1/20433629.
+
+### JS file content format
+
+There is not much to restrict in here except make sure that you check that the DOM is ready before executing your script else your script may run into addressing undefined elements in the DOM.
 
 
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
 
 
