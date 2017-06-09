@@ -73,16 +73,16 @@ And here is an example usage where there is only one extension added.
 }
 
 ```
-* ##### extensions.application, extensions.name, name, title
+* #### extensions.application, extensions.name, name, title
 As long as these are descriptive to some level about the extension and different than the other extensions, it is fine.
 
-* ##### user-name and user-email
+* #### user-name and user-email
 Only one of the user-name and user-email fields are enough to "match" to a request.
 
-* ##### id, extensions.id
+* #### id, extensions.id
 You may be wondering about the id fields that got added. Those are uniquely created to tag this extension. Once you upload the JSON file on the applcations extension page, the id's get assigned automatically.
 
-* ##### url
+* #### url
 To make the injections more specific, there is an url field which you can specify which section of connections it applies to.
 	* "com.ibm.homepage"
 	* "com.ibm.communities"
@@ -91,7 +91,7 @@ To make the injections more specific, there is an url field which you can specif
 	* ADD MORE HERE
 
 
-* ##### type, app_\id
+* #### type, app_\id
 For type, the url and this field have to be matching. So for example:
 ```json
 {
@@ -107,13 +107,12 @@ For app\_id, usually add your user-name and your extension name/title on the end
 ```
 
 
-* ##### include-files
+* #### include-files
 This array includes the .js files that you want the Muse server execute before the client receives it. For directory, the base directory is the github repo base directory. Since this is a shared repo under i1, create a folder with your name, and place the scripts within that folder. The current repo link is https://github.ibm.com/i1/20433629.
 
 ### JS file content format
 
 There is not much to restrict in here except make sure that you check that the DOM is ready before executing your script else your script may run into addressing undefined elements in the DOM.
-
 
 
 
