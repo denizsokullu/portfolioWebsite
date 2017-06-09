@@ -9,7 +9,7 @@ This repository is for test purposes and it contains the scripts people inject t
 
 The way Connections knows that there is a script in this repository and it has to execute is via a JSON file that is added to the Organizations Extensions page.(https://your-domain-name-goes-here/appregistry/#displayApps)
 
-###Formatting the JSON file
+### Formatting the JSON file
 Below is a boilerplate for a JSON Muse extension file.
 ```json
 {
